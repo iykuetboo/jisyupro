@@ -1,0 +1,13 @@
+<div class="">
+<a href="/jisyupro/faceform">顔画像を追加</a>
+</div>
+<br>
+{% for img in images %}
+        <div class="post">
+        {% if img.image %}
+        <div class ="image">
+            <img src="{{ img.image.url }}" style="width:300px;height:auto">
+        </div>
+        <a style="color:red" href="/jisyupro/delete_image/{{img.pk}}">↑この画像を削除</a>
+        {% endif %}
+{% endfor %}

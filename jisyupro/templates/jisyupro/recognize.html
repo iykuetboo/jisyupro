@@ -1,0 +1,14 @@
+
+<span style="color:red">
+  {{msg}}
+</span>
+<br>
+
+<div class="">
+  認識したい顔を送信してください
+
+  <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+          <input type="file" name="image">
+          <button type="submit" class="save btn btn-default">送信</button>
+  </form>
+</div>
